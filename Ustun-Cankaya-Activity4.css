@@ -1,0 +1,51 @@
+.advertisement{
+	width:100px;
+	height:150px; 
+	border-color:black;
+	border-width:2px; 
+	background-color:gray; 
+	color:rgb(0, 0, 0);
+	position: absolute;
+	left: 10px;
+	top: 20px;
+}
+.header{
+	position: absolute;
+	left: 150px;
+	top: 20px;
+}
+.logo {
+	position: absolute;
+	left: 40px;
+	top: 20px;
+}
+.title{
+	position: absolute;
+	left: 500px;
+	top: 20px;
+	width: 	500px;
+}
+.image {
+    float: left;
+    margin-right: 15px; 
+}
+.image img {
+    width: 250px; 
+    height: auto;
+}
+.content{
+	position: absolute;
+	left: 200px;
+	top: 180px;
+	width: 900px;
+    margin: 0 auto; 
+    overflow: hidden; 
+}
+.head{
+	left: 650px;
+	position: absolute;
+	margin-top: 650px;
+}
+.main{
+	text-align: justify;
+}
