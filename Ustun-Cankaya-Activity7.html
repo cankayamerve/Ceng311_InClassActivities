@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Javascript Game</title>
+  <style>
+    #gameButton {
+      position: absolute;
+      padding: 25px 50px;
+      font-size: 15px;
+      background-color: rgb(246, 1, 156);
+      border: 2px solid black; 
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <button id="gameButton">Click Me!</button>
+  <div id="info"></div>
+
+  <script>
+    let button = document.getElementById("gameButton");
+    let info = document.getElementById("info");
+
+    let level = 0;
+    let score = 0;
+    let timeout = 500;
+
+    function moveButton() {
+      const top = Math.random() * (window.innerHeight - 100);
+      const left = Math.random() * (window.innerWidth - 100);
+      button.style.marginTop = top + "px";
+      button.style.marginLeft = left + "px";
+    }
+
+    function escapeButton() {
+      setTimeout(moveButton, timeout);
+    }
+
+    function clickButton() {
+      score++;
+      if (score === 3) {
+        level++;
+        score = 0;
+        timeout = Math.max(0, timeout - 100); 
+        alert("You are the winner! You can go next level " + level + "!");
+      }
+
+      if (level > 6) {
+        alert("Congratulations, you passed all the levels!");
+        button.remove(); 
+      }
+    }
+
+    button.addEventListener("mouseover", escapeButton);
+    button.addEventListener("click", clickButton);
+  </script>
+
+</body>
+</html>
