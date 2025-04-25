@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+label {
+  width: 250px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+}
+
+input.error {
+  border-color: red;
+}
+
+button {
+  padding: 5px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+.ui-datepicker {
+  font-size: 16px;
+}
+
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
